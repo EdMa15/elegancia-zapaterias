@@ -306,6 +306,9 @@ body{
   font-style: normal;
 }
 
+#MBanner{
+  height: 50vh;
+}
 
 /* Media Queries */
 @media (max-width: 1200px) {
