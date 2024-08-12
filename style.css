@@ -1,0 +1,543 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  width: 100%;
+}
+
+#header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding: 0px 80px 10px 80px;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+
+
+#navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li{
+  list-style: none;
+  padding: 0 80px;
+  position: relative;
+}
+
+#header ul{
+  padding: 0 0 5px 0;
+}
+
+#navbar li a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(131, 130, 130);
+  transition: 0.2s ease;
+}
+
+#navbar li a:hover, #navbar li a.active, #navbar li a.Caballero_active{
+  color: rgb(13, 13, 13);
+}
+
+#navbar li a.Dama:hover::after, #navbar li a.Niños:hover::after, #navbar li a.active::after{
+  content: "";
+  width: 30%;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  bottom: -5px;
+  left: 70px;
+}
+
+#navbar li a.Caballero:hover:after, #navbar li a.Caballero_active::after{
+  content: "";
+  width: 40%;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  bottom: -5px;
+  left: 69px;
+}
+
+#header img{
+  max-width: 100%;
+  max-height: 100px;
+}
+
+#hero{
+  display: flex;
+  height: 80vh;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://estaticos.qdq.com/swdata/home_photos/735/735340577/f3ba36f792e946928fc954d6eaef1bfa.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero h1 {
+  font-family: "DM Serif Display";
+  font-size: 7.5em;
+  line-height: 1em;
+  color: #ffffff;
+  text-align: center;
+}
+
+#hero h2 {
+  font-family: "Great Vibes";
+  padding: 10px 0 0 0;
+  font-size: 3.5rem;
+  color: #ffffff;
+}
+
+
+@keyframes slide{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+
+.section-1{
+  height: 27vh;
+  padding: 0 0;
+  background: #f5f4f4;
+}
+
+.brands-slides{
+  display: inline-block;
+  animation: 20s slide infinite linear;
+}
+
+#brands{
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 20px 0;
+  background: #ffffff;
+}
+
+#brands:hover .brands-slides{
+  animation-play-state: paused;
+}
+
+#brands img{
+  height: 50px;
+  width: 80px;
+  margin: 0 40px;
+}
+
+#brands-titles h3{
+  font-family: "Great Vibes";
+  text-align: center;
+  padding: 0 0 40px 0;
+  font-size: 60px;
+}
+
+#about{
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background: #1a0800;
+}
+
+#about h3{
+  font-family: "DM Serif Display";
+  font-size: 60px;
+  color: #ffffff;
+}
+
+#about .Description p{
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  max-width: 900px;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+#products{
+  padding: 50px 50px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #e8e2e2;
+}
+
+#products h3{
+  font-family: "DM Serif Display";
+  font-size: 60px;
+  color: #000000;
+  text-align: center;
+}
+
+#products .container{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+#products .product{
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #1a0800;
+  text-align: center;
+  border-radius: 5%;
+  cursor: pointer;
+  margin: 15px 0;
+  transition: 0.2s ease;
+}
+
+#products .product .description{
+  color: #1a0800;
+  font-family: "DM Serif Display";
+  font-size: 20px;
+  line-height: 25px;
+}
+
+#products .product .description span{
+  color: #6c6867;
+}
+
+#products .product .description h5{
+  padding-top: 7px;
+  color: #381101;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+
+#products .product:hover{
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#products .product img{
+  width: 100%;
+  border-radius: 20%;
+  
+}
+
+.btn{
+  margin: 10px 0;
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+  font-family: "DM Serif Display";
+  font-size: 15px;
+  font-weight: bold;
+  background: #1a0800;
+  width: 225px;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+
+}
+
+.btn:hover, .btn:focus, .btn:active{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
+
+.dm-serif-display-regular {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  #header {
+    padding: 0px 40px 10px 40px;
+  }
+
+  #navbar li {
+    padding: 0 40px;
+  }
+
+  #hero h1 {
+    font-size: 4.5em;
+  }
+
+  #hero h2 {
+    font-size: 2rem;
+  }
+
+  .brands-slides {
+    animation: 20s slide infinite linear;
+  }
+
+  #brands img {
+    height: 40px;
+    width: 60px;
+    margin: 0 20px;
+  }
+
+  #brands-titles h3 {
+    font-size: 40px;
+  }
+
+  #about {
+    padding: 25px 0;
+  }
+
+  #about h3 {
+    font-size: 40px;
+  }
+
+  #about .Description p {
+    font-size: 16px;
+  }
+
+  #products {
+    padding: 25px 25px;
+  }
+
+  #products h3 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  #header {
+    padding: 0px 20px 10px 20px;
+  }
+
+  #navbar {
+    flex-direction: column;
+  }
+
+  #navbar li {
+    padding: 10px 0;
+  }
+
+  #hero h1 {
+    font-size: 3em;
+  }
+
+  #hero h2 {
+    font-size: 1.5rem;
+  }
+
+  #brands{
+    padding: 10px 0;
+  }
+
+  .brands-slides {
+    animation: 20s slide infinite linear;
+  }
+
+  #brands img {
+    height: 30px;
+    width: 50px;
+    margin: 0 10px;
+  }
+
+  #brands-titles h3 {
+    font-size: 30px;
+  }
+
+  #about {
+    padding: 15px 0;
+  }
+
+  #about h3 {
+    font-size: 30px;
+  }
+
+  #about .Description p {
+    font-size: 14px;
+  }
+
+  #products {
+    padding: 15px 15px;
+  }
+
+  #products h3 {
+    font-size: 2em;
+  }
+
+  #products .container {
+    flex-direction: column;
+  }
+
+  #products .product {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  #about iframe{
+    width: 450px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  #header {
+    padding: 0px 10px 10px 10px;
+  }
+
+  #navbar {
+    flex-direction: column;
+  }
+
+  #navbar li {
+    padding: 5px 0;
+  }
+
+  #hero {
+    height: 60vh;
+  }
+
+  #hero h1 {
+    font-size: 2em;
+  }
+
+  #hero h2 {
+    font-size: 1rem;
+  }
+
+  #brands{
+    height: 15vh;
+  }
+
+  .brands-slides {
+    animation: 20s slide infinite linear;
+  }
+
+  #brands img {
+    height: 20px;
+    width: 40px;
+    margin: 0 5px;
+  }
+
+  #brands-titles h3 {
+    font-size: 20px;
+  }
+
+  #about {
+    padding: 10px 0;
+    height: 50vh;
+  }
+
+  #about h3 {
+    font-size: 20px;
+  }
+
+  #about .Description p {
+    font-size: 12px;
+  }
+
+  #products {
+    padding: 20px 10px;
+  }
+
+  #products h3 {
+    font-size: 1.5em;
+  }
+
+  #products .container {
+    flex-direction: column;
+  }
+
+  #products .product {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  #about iframe{
+    width: 350px;
+    height: 200px;
+  }
+}
+
+
+.social{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+.social a{
+  font-size: 35px;
+  display: inline-block;
+  padding: 30px;
+  color: #1a0800;
+}
+
+.social h5{
+  font-family: "Great Vibes";
+  font-size: 40px;
+  text-align: center;
+}
+
+#footer{
+  margin-bottom: -20px;
+}
