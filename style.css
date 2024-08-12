@@ -308,7 +308,7 @@ body{
 
 #MBanner{
   height: 25vh;
-  background-image: url(/images/banner_dama.JPG);
+  background-image: url(images/banner_dama.JPG);
 }
 
 /* Media Queries */
